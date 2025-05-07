@@ -12,10 +12,10 @@ public final class IiGreetings extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        getServer().getPluginManager().registerEvents(new ConnectionListener());
+        getServer().getPluginManager().registerEvents(new ConnectionListener(this), this);
         getCommand("iireload").setExecutor(new ReloadCommand(this));
         saveDefaultConfig();
-        config.options().copyDefaults(true);
+        getConfig().options().copyDefaults(true);
         saveConfig();
         LOGGER.info(ColorUtils.color("&7iiGreetings has &astarted &7successfully."));
     }
