@@ -22,6 +22,7 @@ public class ConnectionListener implements Listener {
             String msg = main.getConfig().getString("configuration.welcome-message");
             if (msg != null) {
                 String message = msg.replace("%player%", e.getPlayer().getName());
+                e.setQuitMessage(null);
                 Bukkit.getOnlinePlayers().forEach(player -> player.sendMessage(ColorUtils.color(message)));
             } else {
                 IiGreetings.LOGGER.warning("[iiGreetings]: Error while sending welcome message, ensure a correct configuration and try again.");
@@ -48,6 +49,7 @@ public class ConnectionListener implements Listener {
             String msg = main.getConfig().getString("configuration.leave-message");
             if (msg != null) {
                 String message = msg.replace("%player%", e.getPlayer().getName());
+                e.setJoinMessage(null);
                 Bukkit.getOnlinePlayers().forEach(player -> player.sendMessage(ColorUtils.color(message)));
             } else {
                 IiGreetings.LOGGER.warning("[iiGreetings]: Error while sending leave message, ensure a correct configuration and try again.");
