@@ -1,0 +1,32 @@
+# ================================
+#  iiGreetings Configuration File
+#  Author: iiDanto
+#  Plugin for custom join/leave messages
+# ================================
+
+# This is the main configuration file for iiGreetings.
+# You can modify the messages and toggle features here.
+
+configuration:
+  # Enable or disable the join message feature
+  join-message-enabled: true
+
+  # Message shown to all players when someone joins
+  # Use %player% for the player's name
+  # Supports color codes (& and hex: &#rrggbb)
+  welcome-message: "&7Welcome to the server, &#48c5ff%player%"
+
+  # Play a sound to everyone on player join
+  join-sound:
+    enabled: true
+    sound: "ENTITY_PLAYER_LEVELUP"
+
+  # Send a private message to the player when they join
+  send-private-welcome: true
+  private-welcome-message: "&aHello %player%! &fEnjoy your stay on our server."
+
+  # Enable or disable the leave message feature
+  leave-message-enabled: true
+
+  # Message shown to all players when someone leaves
+  leave-message: "&7Sorry to see you go, &#48c5ff%player%"

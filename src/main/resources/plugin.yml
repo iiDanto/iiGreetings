@@ -1,0 +1,9 @@
+name: iiGreetings
+version: '1.0-SNAPSHOT'
+main: dev.iiDanto.iiGreetings.IiGreetings
+api-version: '1.21'
+author: iiDanto
+website: Github.com/iiDanto
+commands:
+  iireload:
+    permission: iigreetings.reload
